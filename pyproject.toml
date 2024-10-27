@@ -7,8 +7,16 @@ authors = [
     { name = "Urs Baumann", email = "github@m.ubaumann.ch" }
 ]
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "nuts>=3.4.0",
+]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13.0",
+    "ruff>=0.7.1",
+]
