@@ -1,0 +1,29 @@
+name: Run mock project
+on: [push, workflow_dispatch]
+
+jobs:
+  run-mock_project:
+    name: Install NUTS from wheel and run mock project
+    runs-on: ubuntu-latest
+    services:
+      box01:
+        image: ghcr.io/network-unit-testing-system/nuts-testclient:latest
+        ports:
+          - 2222:22
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+      - name: Set up Python
+        run: uv python install
+      - name: Install the project
+        run: uv sync --all-extras --dev
+
+      - name: Run tests
+        run: ssh-keyscan -p 2222 localhost
+      
