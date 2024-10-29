@@ -1,6 +1,7 @@
 ---
 box01:
-    hostname: sw01
+    hostname: localhost
     platform: linux
+    port: 2222
     username: admin
     password: admin
