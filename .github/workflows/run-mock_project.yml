@@ -8,6 +8,8 @@ jobs:
     services:
       box01:
         image: ghcr.io/network-unit-testing-system/nuts-testclient:latest
+        options: >-
+          --tty
         ports:
           - 2222:22
         env:
@@ -26,8 +28,6 @@ jobs:
       - name: Install the project
         run: uv sync --all-extras --dev
 
-      - name: Give sshd time
-        run: sleep 10
       - name: Run tests
         run: uv run pytest
         working-directory: test_project
