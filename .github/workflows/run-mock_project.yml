@@ -10,6 +10,8 @@ jobs:
         image: ghcr.io/network-unit-testing-system/nuts-testclient:latest
         ports:
           - 2222:22
+        env:
+          ADMIN_PASSWORD: admin
 
     steps:
       - uses: actions/checkout@v4
