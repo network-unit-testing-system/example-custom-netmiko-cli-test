@@ -1,0 +1,6 @@
+---
+box01:
+    hostname: sw01
+    platform: linux
+    username: admin
+    password: admin

@@ -1,0 +1,9 @@
+- test_class: TestNetmikoCLI
+  test_module: example_custom_netmiko_cli_test.netmiko_cli
+  test_execution:
+    command_string: ip addr show
+    use_timing: False
+  test_data:
+    - host: box01
+      contains: "127.0.0.1/8"
+      not_contains: "DOWN"

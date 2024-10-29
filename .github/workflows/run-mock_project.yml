@@ -25,5 +25,6 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: Run tests
-        run: ssh-keyscan -p 2222 localhost
+        run: uv run pytest
+        working-directory: test_project
       
