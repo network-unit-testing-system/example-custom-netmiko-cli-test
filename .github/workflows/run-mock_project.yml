@@ -2,8 +2,8 @@ name: Run mock project
 on: [push, workflow_dispatch]
 
 jobs:
-  run-mock_project:
-    name: Install NUTS from wheel and run mock project
+  run-test_project:
+    name: Install NUTS and run test project using custom test class
     runs-on: ubuntu-latest
     services:
       box01:
@@ -29,6 +29,6 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: Run tests
-        run: uv run pytest
+        run: uv run pytest -vv
         working-directory: test_project
       
