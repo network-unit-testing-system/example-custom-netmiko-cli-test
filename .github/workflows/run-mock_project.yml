@@ -26,6 +26,8 @@ jobs:
       - name: Install the project
         run: uv sync --all-extras --dev
 
+      - name: Give sshd time
+        run: sleep 10
       - name: Run tests
         run: uv run pytest
         working-directory: test_project
