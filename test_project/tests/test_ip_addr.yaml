@@ -7,3 +7,5 @@
     - host: box01
       contains: "127.0.0.1/8"
       not_contains: "DOWN"
+    - host: box01
+      contains: "mtu 1500"

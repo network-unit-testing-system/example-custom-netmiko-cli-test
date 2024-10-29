@@ -61,4 +61,4 @@ class TestNetmikoCLI:
             "command_string", None
         )
         result = single_result.result
-        assert not_contains in result, f"'{not_contains}' FOUND in '{cmd}' output"
+        assert not_contains not in result, f"'{not_contains}' FOUND in '{cmd}' output"
