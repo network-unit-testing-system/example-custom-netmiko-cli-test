@@ -17,7 +17,9 @@ EXAMPLE = """
   test_module: example_custom_netmiko_cli_test.netmiko_cli
   test_execution:
     command_string: show call-home
-    use_timing: False
+    use_timing: False  # Determines whether to use send_command_timing (True) or send_command (False) for command execution
+    # test_execution parameters are passed to the send_command or send_command_timing function
+    # See Netmiko documentation for details: https://ktbyers.github.io/netmiko/docs/netmiko/index.html#netmiko.BaseConnection.send_command
   test_data:
     - host: switch01
       contains: "call home feature : disable"
