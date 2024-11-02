@@ -18,7 +18,7 @@ This repository demonstrates how to create a custom test for NUTS (Network Unit 
 
 ## Setup Project
 
-This project uses [UV](https://docs.astral.sh/uv/), a fast Python package manager, though you may also use (Poetry)[https://python-poetry.org/] or any other package manager.
+This project uses [UV](https://docs.astral.sh/uv/), a fast Python package manager, though you may also use [Poetry](https://python-poetry.org/) or any other package manager.
 
 To set up with `uv`, run:
 ```bash
