@@ -1,12 +1,12 @@
 # Test Project
 
-This project demonstrates the use of the custom netmiko cli test
+This project demonstrates the use of a custom Netmiko CLI test.
 
 ## Setup
 
-A Linux container needs to be running and expose SSH over port 2222
+To run this test, a Linux container must be active and configured to expose SSH on port 2222.
 
-The GitHub Action workflow stats the container:
+The GitHub Action workflow initiates the container with the following configuration:
 
 ```yaml
     services:
